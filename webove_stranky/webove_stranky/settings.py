@@ -124,3 +124,19 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+
+EMAIL_BACKEND       = 'django.core.mail.backends.console.EmailBackend'
+'''
+EMAIL_HOST          = 'fs2025.erneks.cz'
+EMAIL_PORT          = 587
+EMAIL_USE_TLS       = True                 # musí být True
+EMAIL_HOST_USER     = '@erneks.cz'
+EMAIL_HOST_PASSWORD = ''          # nebo jakkoli se jmenuje tvé ASCII heslo
+DEFAULT_FROM_EMAIL  = EMAIL_HOST_USER       # pošli to “od” vás
+SERVER_EMAIL        = EMAIL_HOST_USER
+'''
+# Kam to má přijít
+DISPECER_EMAIL = 'martin.peschout@erneks.cz'
+

@@ -22,4 +22,5 @@ from website import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
+    path('poptat/', views.poptat_dopravu, name='poptat'),
 ]
