@@ -1,0 +1,67 @@
+<!-- templates/website/index.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ERNEKS INVEST s.r.o.</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="{% static 'images/logo.png' %}" alt="ERNEKS INVEST s.r.o." class="logo">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Přepnout motiv">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Spolehlivá cisternová doprava</h1>
+      <a href="{% url 'poptat' %}" class="btn-primary">Poptat dopravu</a>
+      </button>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="container services-cards">
+        <div class="card service-card">
+          <h3>O nás</h3>
+          <p>Jsme spolehlivým partnerem pro přepravu tekutých surovin. Na trhu působíme již řadu let.</p>
+        </div>
+        <div class="card service-card">
+          <h3>Nabídka přepravy</h3>
+          <p>Specializujeme se na cisternovou přepravu mléka a pohonných hmot po celé Evropě.</p>
+        </div>
+        <div class="card service-card">
+          <h3>Poptat dopravu</h3>
+          <p>Kontaktujte nás pro nezávaznou nabídku přepravy. Rádi se s Vámi domluvíme na detailech.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS & JOBS -->
+    <section class="news-jobs">
+      <div class="overlay"></div>
+      <div class="container news-jobs-cards">
+        <div class="card news-card">
+          <h3>Novinky</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh.</p>
+          <a href="#" class="btn-link">Přečíst více</a>
+        </div>
+        <div class="card jobs-card">
+          <h3>Volná místa</h3>
+          <p>Připojte se do našeho týmu! Nabízíme pracovní příležitosti pro řidiče.</p>
+          <a href="#" class="btn-link">Aktuální nabídka</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{% static 'js/theme-toggle.js' %}"></script>
+</body>
+</html>
