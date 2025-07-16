@@ -35,3 +35,6 @@ def poptat_dopravu(request):
     else:
         form = PoptavkaForm()
     return render(request, 'website/poptat.html', {'form': form})
+
+def o_nas(request):
+    return render(request, 'website/o_nas.html')
