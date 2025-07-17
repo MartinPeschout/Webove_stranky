@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nabídka přepravy – ERNEKS INVEST</title>
+
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  {% include 'website/header.html' %}
+
+  <main class="container" style="padding-top:80px;">
+    <section class="offer-section">
+      <h1>Nabídka přepravy</h1>
+
+      <div class="icons-grid">
+        <div class="item"><i class="fas fa-truck-front"></i> <p>Cisternová přeprava potravin – vícekomorové, izolované cisterny tažené vozy VOLVO s kompresory.</p></div>
+        <div class="item"><i class="fas fa-wine-bottle"></i> <p>Oleje, pivo, další tekutiny – přepravíme jakýkoli potravinářský produkt.</p></div>
+        <div class="item"><i class="fas fa-map-location-dot"></i> <p>Pokrytí: ČR, Slovensko, Maďarsko, Rakousko, Německo.</p></div>
+        <div class="item"><i class="fas fa-satellite-dish"></i> <p>GPS sledování zásilek v reálném čase.</p></div>
+        <div class="item"><i class="fas fa-shield-heart"></i> <p>HACCP a sanitace – ECD dokumentace po každé sanitaci.</p></div>
+        <div class="item"><i class="fas fa-diagram-project"></i> <p>Profesionální proces v 4 krocích (poptávka → plánování → přeprava → doručení).</p></div>
+      </div>
+
+      <div class="advantages">
+        <ul>
+          <li>Více než 15 let zkušeností v oboru</li>
+          <li>6 vícekomorových, izolovaných cistern</li>
+          <li>GPS monitoring pro maximální bezpečnost a efektivitu</li>
+          <li>Sledování procesu a sanitace s ECD potvrzením</li>
+        </ul>
+      </div>
+
+      <div class="cta-section" style="text-align:center; margin-top:2rem;">
+        <a href="{% url 'poptat' %}" class="btn-primary">Přejít na poptávkový formulář</a>
+      </div>
+    </section>
+  </main>
+
+  {% include 'website/footer.html' %}
+  <script src="{% static 'js/theme-toggle.js' %}"></script>
+</body>
+</html>

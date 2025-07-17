@@ -38,3 +38,6 @@ def poptat_dopravu(request):
 
 def o_nas(request):
     return render(request, 'website/o_nas.html')
+
+def nabidka_dopravy(request):
+    return render(request, 'website/nabidka-dopravy.html')

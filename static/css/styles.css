@@ -131,3 +131,107 @@ form .btn-primary {
   margin-bottom: 1.2em;
   padding-left: 1.2em;
 }
+
+ChatGPT řekl:
+Tady máš kompletní a upravenou verzi nabidka-dopravy.html i styles.css, aby vše správně fungovalo a vypadalo profesionálně. Zahrnul jsem i hlavičku pro Font Awesome a jednotný layout ikon.
+
+📄 Šablona nabidka-dopravy.html
+html
+Zkopírovat
+Upravit
+{% load static %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nabídka přepravy – ERNEKS INVEST</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Font Awesome CDN pro ikony -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-k5fjhUj1cT...", crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  {% include 'website/header.html' %}
+
+  <main class="container" style="padding-top:80px;">
+    <section class="offer-section">
+      <h1>Nabídka přepravy</h1>
+
+      <div class="icons-grid">
+        <div class="item">
+          <i class="fas fa-truck-front"></i>
+          <p>Cisternová přeprava potravin – vícekomorové, izolované cisterny tažené vozy VOLVO s kompresory.</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-wine-bottle"></i>
+          <p>Oleje, pivo, další tekutiny – přepravíme jakýkoli potravinářský produkt.</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-map-location-dot"></i>
+          <p>Pokrytí: ČR, Slovensko, Maďarsko, Rakousko, Německo.</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-satellite-dish"></i>
+          <p>GPS sledování zásilek v reálném čase.</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-shield-heart"></i>
+          <p>HACCP a sanitace – ECD dokumentace po každé sanitaci.</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-diagram-project"></i>
+          <p>Profesionální proces v 4 krocích (poptávka → plánování → přeprava → doručení).</p>
+        </div>
+      </div>
+
+      <div class="advantages">
+        <ul>
+          <li>Více než 15 let zkušeností v oboru</li>
+          <li>6 vícekomorových, izolovaných cistern</li>
+          <li>GPS monitoring pro maximální bezpečnost a efektivitu</li>
+          <li>Sledování procesu a sanitace s ECD potvrzením</li>
+        </ul>
+      </div>
+
+      <div class="cta-section" style="text-align:center; margin-top:2rem;">
+        <a href="{% url 'poptat' %}" class="btn-primary">Přejít na poptávkový formulář</a>
+      </div>
+    </section>
+  </main>
+
+  {% include 'website/footer.html' %}
+</body>
+</html>
+🎨 Aktualizovaný styles.css
+css
+Zkopírovat
+Upravit
+/* Grid pro karty s ikonami */
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.icons-grid .item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icons-grid .item i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-gradient);
+}
+
+/* Styling CTA tlačítka */
+.cta-section .btn-primary {
+  padding: .75rem 1.5rem;
+  font-size: 1.125rem;
+}

@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('poptat/', views.poptat_dopravu, name='poptat'),
     path('o-nas/', views.o_nas, name='o-nas'),
+    path('nabidka-dopravy/', views.nabidka_dopravy, name='nabidka-dopravy'),
 ]
