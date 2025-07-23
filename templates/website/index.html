@@ -40,6 +40,7 @@
         <div class="card service-card">
           <h3>Poptat dopravu</h3>
           <p>Kontaktujte nás pro nezávaznou nabídku přepravy. Rádi se s Vámi domluvíme na detailech.</p>
+          <a href="{% url 'poptat' %}" class="btn-secondary">Poptat</a>
         </div>
       </div>
     </section>
@@ -56,7 +57,8 @@
         <div class="card jobs-card">
           <h3>Volná místa</h3>
           <p>Připojte se do našeho týmu! Nabízíme pracovní příležitosti pro řidiče.</p>
-          <a href="#" class="btn-link">Aktuální nabídka</a>
+          <!-- Odkaz vede na samostatnou stránku jobs.html -->
+          <a href="{% url 'jobs' %}" class="btn-link">Aktuální nabídka</a>
         </div>
       </div>
     </section>

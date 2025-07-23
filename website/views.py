@@ -41,3 +41,11 @@ def o_nas(request):
 
 def nabidka_dopravy(request):
     return render(request, 'website/nabidka-dopravy.html')
+
+def jobs_list(request):
+    return render(request, 'website/jobs.html')
+
+def apply(request):
+    position = request.GET.get('position', '')
+    context = {'position': position}
+    return render(request, 'website/apply.html', context)

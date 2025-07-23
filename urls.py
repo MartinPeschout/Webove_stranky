@@ -25,4 +25,6 @@ urlpatterns = [
     path('poptat/', views.poptat_dopravu, name='poptat'),
     path('o-nas/', views.o_nas, name='o-nas'),
     path('nabidka-dopravy/', views.nabidka_dopravy, name='nabidka-dopravy'),
+    path('volna-mista/', views.jobs_list, name='jobs'),
+    path('apply/', views.apply, name='apply'),
 ]
