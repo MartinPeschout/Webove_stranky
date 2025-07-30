@@ -1,4 +1,6 @@
 <!-- jobs.html -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <section id="driver" class="jobs-card">
   <div class="header">
     <i class="fas fa-truck" style="font-size:3rem; margin-bottom:0.5rem; color: var(--primary-gradient);"></i>
@@ -6,21 +8,22 @@
   </div>
   <p>Hledáme šikovné a spolehlivé řidiče s platným profesním průkazem. Přidejte se do našeho týmu.</p>
   
-  <div class="details" style="margin-top:1.5rem;">
-    <h3>Požadavky:</h3>
+  <class="details" style="margin-top:1.5rem;">
+    <h3 style = "margin-top: 1.5rem;">Požadavky:</h3>
     <ul>
       <li>Řidičské oprávnění skupiny C+E</li>
       <li>Platný profesní průkaz</li>
       <li>Praxe v silniční nákladní dopravě (plachta,cisterna)</li>
     </ul>
 
-    <h3>Benefity:</h3>
+    <h3 style="margin-top: 1.5rem;">Benefity:</h3>
     <ul>
       <li>Stabilní plat + příplatky za noční a víkendové jízdy</li>
       <li>Přátelský tým a rodinná atmosféra</li>
     </ul>
-  </div>
+    </div>
+    </div>
 
-  <a href="{% url 'apply' %}?position=driver" class="btn-primary">Přihlásit se</a>
+    <a href="{% url 'apply' %}?position=řidič" class="btn-highlight" style="margin-top: 1.5rem;">Přihlásit se</a>
 
 </section>

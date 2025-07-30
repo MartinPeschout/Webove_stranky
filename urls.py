@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
     path('poptat/', views.poptat_dopravu, name='poptat'),
-    path('o-nas/', views.o_nas, name='o-nas'),
-    path('nabidka-dopravy/', views.nabidka_dopravy, name='nabidka-dopravy'),
-    path('volna-mista/', views.jobs_list, name='jobs'),
+    path('o_nas/', views.o_nas, name='o_nas'),
+    path('nabidka_dopravy/', views.nabidka_dopravy, name='nabidka_dopravy'),
+    path('volna-mista/', views.jobs_list, name='jobs_list'),
     path('apply/', views.apply, name='apply'),
 ]

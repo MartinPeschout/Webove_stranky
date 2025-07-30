@@ -1,22 +1,47 @@
-{% extends "base.html" %}
-{% block content %}
-  <section class="inquiry-section">
-    <h2>Přihláška na pozici: {{ position|capfirst }}</h2>
-    <form method="post" action="">
-      {% csrf_token %}
-      <div class="form-group">
-        <label for="name">Jméno a příjmení</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group form-full">
-        <label for="cv">Odkaz na životopis / popis zkušeností</label>
-        <textarea id="cv" name="cv" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn-primary">Odeslat přihlášku</button>
-    </form>
-  </section>
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Přihláška na pozici: {{ position|capfirst }}</title>
+
+  <!-- Připojení stylů -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  {% include 'website/header.html' %}
+
+  <main class="container" style="padding-top:80px;">
+    <section class="inquiry-section">
+      <h2>Přihláška na pozici: {{ position|capfirst }}</h2>
+      <form method="post" action="" class="application-form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Jméno a Příjmení</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telephone">Telefon</label>
+          <input type="tel" id="telephone" name="telephone" required>
+        </div>
+        <div class="form-group">
+          <label for="cv">Popis zkušeností/Poznámka</label>
+          <textarea id="cv" name="cv" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Odeslat přihlášku</button>
+      </form>
+    </section>
+  </main>
+
+  {% include 'website/footer.html' %}
+
+</body>
+</html>
+

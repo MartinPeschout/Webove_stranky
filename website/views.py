@@ -1,5 +1,5 @@
 # website/views.py
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import PoptavkaForm
@@ -40,12 +40,18 @@ def o_nas(request):
     return render(request, 'website/o_nas.html')
 
 def nabidka_dopravy(request):
-    return render(request, 'website/nabidka-dopravy.html')
+    return render(request, 'website/nabidka_dopravy.html')
 
 def jobs_list(request):
-    return render(request, 'website/jobs.html')
+    return render(request, 'website/jobs_list.html')
 
 def apply(request):
     position = request.GET.get('position', '')
+    context = {'position': position}
+    return render(request, 'website/apply.html', context)
+
+def apply(request):
+    position = request.GET.get('position', '')
+    # Můžeš načíst další data na základě position
     context = {'position': position}
     return render(request, 'website/apply.html', context)
